@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Lobster">
+  <title>HTML Forms</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-3 m-4 ml-5">
+        <h1 class="display-4" id="title">Form <br> Submission</h1>
+        <form onsubmit="getData(event)" id="form" class="form ">
+          <div class="form-group">
+            <label class="mainLabel" for="fname">First Name:</label><br>
+            <input class="textBox" type="text" id="first-name" placeholder="First Name" required name="firstName"><br>
+            <label class="mainLabel" for="lname">Last Name:</label><br>
+            <input class="textBox" type="text" id="last-name" placeholder="Last Name" required name="lastName"><br>
+            <label class="mainLabel" for="add1">Address:</label><br>
+            <textarea name="" class="textBox" id="address" cols="30" rows="2" placeholder="Address" name="address"></textarea><br>
+            
+            <label class="mainLabel" for="pin" >Pincode:</label><br>
+            <input class="textBox" type="text" id="pincode" placeholder="PIN" required name="pinCode"><br>
+            <label class="mainLabel" for="gender">Gender</label><br>
+            <input type="radio" name="gender" id="gender1" value="Male">
+            <label for="gender1" class="radioLabel">Male</label>
+            <input type="radio" name="gender" id="gender2" value="Female">
+            <label for="gender2" class="radioLabel">Female</label><br>
+            <label class="mainLabel" for="food" style="margin-bottom: 10px;">Choise of Food <br><span style="font-size:12px;" ><i id="foodReq"> (must choose at least 2 out of 5 options)</i></span></label><br>
+            <input  type="checkbox" name="food" id="food1" value="North Indian">
+            <label class="foodLabel"  for="food1">North Indian</label><br>
+            <input  type="checkbox" name="food" id="food2" value="South Indian">
+            <label class="foodLabel" for="food2">South Indian</label><br>
+            <input  type="checkbox" name="food" id="food3" value="Chinese">
+            <label class="foodLabel" for="food3">Thailand</label><br>
+            <input  type="checkbox" name="food" id="food4" value="Japanese">
+            <label class="foodLabel" for="food4">Japanese</label><br>
+            <input  type="checkbox" name="food" id="food5" value="Sea Food">
+            <label class="foodLabel" for="food5">Arabian Food</label><br>
+            <label class="mainLabel"  for="state">State:</label><br>
+            <input class="textBox" type="text" placeholder="State" id="state" name="state" required><br>
+            <label class="mainLabel" for="country">Country:</label><br>
+            <input class="textBox" type="text" placeholder="Country" id="country" name="country" required><br>
+            <input type="submit" class="btn btn-primary p-1" id="submit"><br><i id="warning"></i><br><br>
+
+          </div>
+
+        </form>
+      </div>
+
+      <div class="col m-4">
+        <h1 class="display-4">Database</h1>
+        <p id="description">This Temporary database stores the data entered though the HTML form</p>
+        <div class="table-responsive ">
+          <table class="table table-bordered border-bottom">
+            <thead class="thead-light">
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Address</th>
+              <th>PinCode</th>
+              <th>Gender</th>
+              <th> Food</th>
+              <th>State</th>
+              <th>country</th>
+            </thead>
+            <tbody id="tbody">
+  
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+ <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script> 
+  <script src="script.js"></script>
+</body>
+</html>

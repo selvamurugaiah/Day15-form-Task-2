@@ -1,0 +1,14 @@
+body{
+    background-color: aqua;
+}
+
+tr,td{
+    border: 2px solid red;
+    margin: 15px;
+    padding: 10px;
+}
+th{
+    border: 2px solid rgb(0, 0, 0);
+    margin: 15px;
+    padding: 10px;
+}
